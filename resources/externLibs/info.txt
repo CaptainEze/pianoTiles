@@ -1,0 +1,2 @@
+These are open source third party libraries
+used to run game. 
