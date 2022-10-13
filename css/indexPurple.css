@@ -1,0 +1,175 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face{
+    font-family:digitaFont;
+    src:url("../assets/fonts/Aldrich-Regular.ttf");
+}
+@font-face{
+    font-family:alexBrush;
+    src:url("../assets/fonts/AlexBrush-Regular.ttf");
+}
+@font-face{
+    font-family:Blackout;
+    src:url("../assets/fonts/Blackout-Midnight.ttf");
+}
+@font-face{
+    font-family:robotoM;
+    src:url("../assets/fonts/Roboto-Medium.ttf")
+}
+body{
+    background: linear-gradient(180deg,#330E40,#3800CC);
+    background-attachment: fixed;
+    height: 100vh;
+}
+.backImg{
+    position: absolute;
+    z-index: -1;
+    width: 60vw;
+}
+#saturnImg{
+    top: 28vh;
+    left: 9vw;
+}
+#musImg{
+    bottom: 20vh;
+    right: 0;
+}
+div #container{
+    padding: 0;
+    width: 99vh;
+}
+.header{
+    position: fixed;
+    background:linear-gradient(145deg,#00FFE800,#00A1FF00) ;
+    width: 100vw;
+    padding: 0;
+}
+.headerItem{
+    z-index: 999;
+    border: 2px solid #00FFED;
+    border-radius: 6px;
+    width: 20vw;
+    /*height: 4vh;*/
+    background-color: #4100FF;
+    display: inline-block;
+    margin: 0.1em 0.7em 0.1em 0.7em;
+    overflow: hidden;
+}
+.headerItem img{
+    width:.8em;
+    position: relative;
+    left: 0;
+}
+.headerItem #coinNum,#starNum{
+    color: #FFF;
+    font-family:digitaFont;
+    font-size: .7em;
+    font-weight: 700;
+    background-color: #212;
+}
+#userItems{
+    display: inline-block;
+    position: absolute;
+    right: 5vw;
+    top: .6em;
+}
+.userItem{
+    background-color: rgba(255,255,100,0);
+    border: none;
+}
+.userImg{
+    width: 1.5em;
+    height: 1.5em;
+    background-color: rgba(255,255,100,0);
+    border: none;
+}
+#user{
+    margin-right: 0.4em;
+}
+#settings{
+    margin-left: 0.4em;
+}
+#top{
+    overflow: hidden;
+    padding: 1.7em 0 0 0;
+    text-align: center;
+    /*border: 4px solid black;*/
+    width: 100vw;
+    max-height: 30vh;
+    background-image: url('../assets/backgrounds/1copy.png');
+    background-size: 100% 100%;
+}
+#topText{
+    /*border: 4px solid red;*/
+}
+#piano{
+    font-family: alexBrush;
+    font-size: 5em;
+    font-weight: 550;
+    color: #FF0062;
+    text-shadow: -5px -3px 4px #221132;
+}
+#tiles{
+    font-family: Blackout;
+    font-size: 2em;
+    font-weight: 500;
+    letter-spacing: .5em;
+    position: relative;
+    top: -1em;
+    color: #6500FF;
+    z-index: 1;
+}
+#mid{
+    width: 100vw;
+    max-height: 60vh;
+    /*border: 2px solid brown;*/
+}
+#songList{
+    min-height: 8em;
+    height: 60vh;
+    width: 86%;
+    background-color: #c3c3c310;
+    margin: 0 auto 0 auto;
+    overflow: scroll;
+}
+@media screen and (max-width: 480px){
+    .song{
+        width: 100%;
+        height: 10vh;
+        border: 2px solid #00AFD391;
+        border-radius: .6em;
+        overflow: hidden;
+    }
+    .songName{
+        /*margin: auto 0 auto 0;*/
+        font-family: robotoM;
+        font-size: 1.8em;
+        color: #DF0066;
+        border: 1px solid black;
+        /*bottom: -20%;*/
+    }
+    .songName, #prog{
+        display: inline-block;
+        position: relative;
+        vertical-align:bottom;
+        margin: 0 .3em 0 .3em;
+        bottom: -3vh;
+    }
+    #prog{
+        /*top: 37%;*/
+    }
+    .starImg{
+        width: 1.3em;
+    }
+}
+#softConsole{
+    background-image: url('../assets/backgrounds/a.png');
+    background-size: 100% 110%;
+    /*border: 2px solid red;*/
+    width: 100vw;
+    height: 15vh;
+    min-height: 2em;
+}
