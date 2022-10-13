@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--  JQuery link  -->
+        <script src="../../externLibs/JQuery/JQuery--v-3.6.0_min.js" type="text/javascript"></script>
+        <!--  Howler link  -->
+        <script src="../../externLibs/Howler/howler-2.2.1-min.js" type="text/javascript"></script>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta charset="UTF-8">
+        
+        <link rel="stylesheet">
+    
+        <script src="../../../js/globals.js" type="text/javascript"></script>
+        <script src="../../../js/itemsProperty.js" type="text/javascript"></script>
+        <script src="../../../js/setTheme.js" type="text/javascript"></script>
+        <script src="../../../js/createTilesFunctions.js" type="text/javascript"></script>
+        <script src="../../../js/bringTiles.js" type="text/javascript"></script>
+        <script src="../../../js/assignGameLayoutProperties.js" type="text/javascript"></script>
+        
+        <script src="../../tilesCall/monodyPlay.js" type="text/javascript"></script>
+    
+    </head>
+
+    <body id="body">
+        <div id="container">
+            <div id="all_tiles"></div>
+        </div>
+        
+        <button id="but" onclick="play1()" ondblclick="stoo()" disabled="true">loading...</button>
+        
+        <script type="text/javascript">
+            const node = document.getElementById("all_tiles");
+            assignLayoutStyleForGamePage();
+        </script>
+        
+    </body>
+</html>
