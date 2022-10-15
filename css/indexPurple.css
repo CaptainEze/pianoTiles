@@ -24,146 +24,229 @@ body{
     background-attachment: fixed;
     height: 100vh;
 }
-.backImg{
-    position: absolute;
-    z-index: -1;
-    width: 60vw;
+@media screen and (min-width :480px){
+    img, p, button, span, #softConsole{
+        display: none;
+    }
+    body{
+        animation: changeBackground 4s infinite;
+    }
+    section{
+        text-align: center;
+        color: #92FF46;
+        line-height: 2.5em;
+    }
+    #art1{
+        font-size: 130%;
+        font-family: Monospace, Arial;
+        font-weight: 670;
+        color: #92FF46;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: type 6s steps(40,end) forwards , blink 0.5s infinite;
+    }
+    #art2{
+        font-size: 0;
+        font-family: digitaFont;
+        font-weight: 500;
+        color: #04FF00;
+        white-space: nowrap;
+        animation:art1Anim 4s ease-out forwards;
+        animation-delay: 5s;
+    }
+    #art3{
+        font-size: 130%;
+        font-weight: 700;
+        color: #DC0A00;
+    }
+    #art4{
+        font-style: italic;
+        font-family: digitaFont;
+        font-size: 140%;
+        color: rgba(0,0,255,0);
+        animation: show 3s ease-out 10s forwards;
+        
+    }
+    @keyframes changeBackground{
+        0%{background: linear-gradient(180deg,#330E40,#3800CC);}
+        25%{background: linear-gradient(270deg,#330E40,#3800CC);}
+        50%{background: linear-gradient(0deg,#330E40,#3800CC);}
+        75%{background: linear-gradient(90deg,#330E40,#3800CC);}
+        100%{background: linear-gradient(180deg,#330E40,#3800CC);}
+    }
+    @keyframes art1Anim{
+        from{font-size: 0%}
+        to{font-size: 170%}
+    }
+    @keyframes type{
+        from{width: 0}
+        to{width: 90%}
+    }
+    @keyframes blink{
+        from{border-right: transparent}
+        to{border-right: 2px solid green}
+    }
+    @keyframes show{
+        from{color: rgba(0,0,255,0)}
+        to{color: rgba(0,0,255,1)}
+    }
+
 }
-#saturnImg{
-    top: 28vh;
-    left: 9vw;
-}
-#musImg{
-    bottom: 20vh;
-    right: 0;
-}
-div #container{
-    padding: 0;
-    width: 99vh;
-}
-.header{
-    position: fixed;
-    background:linear-gradient(145deg,#00FFE800,#00A1FF00) ;
-    width: 100vw;
-    padding: 0;
-}
-.headerItem{
-    z-index: 999;
-    border: 2px solid #00FFED;
-    border-radius: 6px;
-    width: 20vw;
-    /*height: 4vh;*/
-    background-color: #4100FF;
-    display: inline-block;
-    margin: 0.1em 0.7em 0.1em 0.7em;
-    overflow: hidden;
-}
-.headerItem img{
-    width:.8em;
-    position: relative;
-    left: 0;
-}
-.headerItem #coinNum,#starNum{
-    color: #FFF;
-    font-family:digitaFont;
-    font-size: .7em;
-    font-weight: 700;
-    background-color: #212;
-}
-#userItems{
-    display: inline-block;
-    position: absolute;
-    right: 5vw;
-    top: .6em;
-}
-.userItem{
-    background-color: rgba(255,255,100,0);
-    border: none;
-}
-.userImg{
-    width: 1.5em;
-    height: 1.5em;
-    background-color: rgba(255,255,100,0);
-    border: none;
-}
-#user{
-    margin-right: 0.4em;
-}
-#settings{
-    margin-left: 0.4em;
-}
-#top{
-    overflow: hidden;
-    padding: 1.7em 0 0 0;
-    text-align: center;
-    /*border: 4px solid black;*/
-    width: 100vw;
-    max-height: 30vh;
-    background-image: url('../assets/backgrounds/1copy.png');
-    background-size: 100% 100%;
-}
-#topText{
-    /*border: 4px solid red;*/
-}
-#piano{
-    font-family: alexBrush;
-    font-size: 5em;
-    font-weight: 550;
-    color: #FF0062;
-    text-shadow: -5px -3px 4px #221132;
-}
-#tiles{
-    font-family: Blackout;
-    font-size: 2em;
-    font-weight: 500;
-    letter-spacing: .5em;
-    position: relative;
-    top: -1em;
-    color: #6500FF;
-    z-index: 1;
-}
-#mid{
-    width: 100vw;
-    max-height: 60vh;
-    /*border: 2px solid brown;*/
-}
-#songList{
-    min-height: 8em;
-    height: 60vh;
-    width: 86%;
-    background-color: #c3c3c310;
-    margin: 0 auto 0 auto;
-    overflow: scroll;
-}
+
 @media screen and (max-width: 480px){
+    section{
+        display: none;
+    }
+    .backImg{
+        position: absolute;
+        z-index: -1;
+        width: 60vw;
+    }
+    #saturnImg{
+        top: 28vh;
+        left: 9vw;
+    }
+    #musImg{
+        bottom: 20vh;
+        right: 0;
+    }
+    div #container{
+        padding: 0;
+        width: 99vh;
+    }
+    .header{
+        position: fixed;
+        background:linear-gradient(145deg,#00FFE800,#00A1FF00) ;
+        width: 100vw;
+        padding: 0;
+    }
+    .headerItem{
+        z-index: 999;
+        border: 2px solid #00FFED;
+        border-radius: 6px;
+        width: 20vw;
+        background-color: #4100FF;
+        display: inline-block;
+        margin: 0.1em 0.7em 0.1em 0.7em;
+        overflow: hidden;
+    }
+    .headerItem img{
+        width:.8em;
+        position: relative;
+        left: 0;
+    }
+    .headerItem #coinNum,#starNum{
+        color: #FFF;
+        font-family:digitaFont;
+        font-size: .7em;
+        font-weight: 700;
+        background-color: #212;
+    }
+    #userItems{
+        display: inline-block;
+        position: absolute;
+        right: 5vw;
+        top: .6em;
+    }
+    .userItem{
+        background-color: rgba(255,255,100,0);
+        border: none;
+    }
+    .userImg{
+        width: 1.5em;
+        height: 1.5em;
+        background-color: rgba(255,255,100,0);
+        border: none;
+    }
+    #user{
+        margin-right: 0.4em;
+    }
+    #settings{
+        margin-left: 0.4em;
+    }
+    #top{
+        overflow: hidden;
+        padding: 1.7em 0 0 0;
+        text-align: center;
+        width: 100vw;
+        max-height: 30vh;
+        background-image: url('../assets/backgrounds/1copy.png');
+        background-size: 100% 100%;
+    }
+    #topText{
+        /*border: 4px solid red;*/
+    }
+    #piano{
+        font-family: alexBrush;
+        font-size: 5em;
+        font-weight: 550;
+        color: #FF0062;
+        text-shadow: -5px -3px 4px #221132;
+    }
+    #tiles{
+        font-family: Blackout;
+        font-size: 2em;
+        font-weight: 500;
+        letter-spacing: .5em;
+        position: relative;
+        top: -1em;
+        color: #6500FF;
+        z-index: 1;
+    }
+
+    #mid{
+        width: 100vw;
+        max-height: 60vh;
+        /*border: 2px solid brown;*/
+    }
+    #songList{
+        min-height: 8em;
+        height: 60vh;
+        width: 86%;
+        background-color: #c3c3c310;
+        margin: 0 auto 0 auto;
+        overflow: scroll;
+    }
     .song{
+        white-space: nowrap;
         width: 100%;
         height: 10vh;
-        border: 2px solid #00AFD391;
+        border: 4px solid #0001FF;
         border-radius: .6em;
         overflow: hidden;
     }
     .songName{
-        /*margin: auto 0 auto 0;*/
         font-family: robotoM;
-        font-size: 1.8em;
+        font-size: 1.9em;
         color: #DF0066;
-        border: 1px solid black;
-        /*bottom: -20%;*/
+        margin: 0 .3em 0 0;
     }
-    .songName, #prog{
+    .songName, .prog, .playBtn{
         display: inline-block;
-        position: relative;
         vertical-align:bottom;
-        margin: 0 .3em 0 .3em;
-        bottom: -3vh;
     }
-    #prog{
-        /*top: 37%;*/
+    .prog{
+        margin: 0;
     }
     .starImg{
-        width: 1.3em;
+        width: 1em;
     }
+    .playBtn{
+        border: none;
+        background-color: #0000FF;
+        width: 5em;
+        height: 100%;
+        position: relative;
+        left: 6%;
+        padding: 0 2em 0 .5em;
+    }
+    .playBtnImage{
+        margin: 0;
+        width: .9em;
+        /*height: 10vh;*/
+    }
+    
 }
 #softConsole{
     background-image: url('../assets/backgrounds/a.png');
