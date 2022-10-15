@@ -1,16 +1,17 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
     <head>
+        <title>Piano Tiles Game for mobile</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta charset="UTF-8">
         
         <link rel="stylesheet">
-        
+        <script src="./resources/externLibs/JQuery/JQuery--v-3.6.0_min.js" type="text/javascript"></script>
         <script src="./js/globals.js" type="text/javascript" ></script>
         <script src="./js/itemsProperty.js"></script>
         <script src="./js/setTheme.js" type="text/javascript"></script>
         <script src="./js/assignGameLayoutProperties.js" type="text/javascript"></script>
-    
+        <script src="./js/addSongsToIndex.js" type="text/javascript"></script>
     </head>
     <body>
         <img src="./assets/backgrounds/4.png" id="saturnImg" class="backImg">
@@ -44,12 +45,15 @@
                 <div id="songList">
                     <div class="song">
                         <p class="songName">Monody</p>
-                        <span id="prog">
+                        <span class="prog">
                             <img class="starImg" src="./assets/SVGs/starWhite.svg">
                             <img class="starImg" src="./assets/SVGs/starWhite.svg">
                             <img class="starImg" src="./assets/SVGs/star.svg">
+                            <img class="starImg" src="./assets/SVGs/awardGold.svg">
                         </span>
-                        <a href="./resources/src/htmlPages/1.html">ch</a>
+                        <button class="playBtn">
+                            <img class="playBtnImg" src="./assets/SVGs/music.svg">
+                        </button>
                     </div>
                     <div class="song"></div>
                     <div class="song"></div>
@@ -79,6 +83,12 @@
                 </div>
             </div>
         </div>
+        <section>
+            <article id="art1" class="art">looks like you're not using a mobile screen </article>
+            <article id="art2" class="art">We are sorry</article>
+            <article id="art3" class="art">This game only works for mobile <a href="#" >learn more</a></article>
+            <article id="art4" class="art">Get a mobile screen and play</article>
+        </section>
     </body>
     <script type="text/javascript">
         assignLayoutStyleForIndex();
