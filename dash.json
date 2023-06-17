@@ -2,3 +2,9 @@
     "email":"ezetheophilus05@gmail.com",
     "password":"123456qwerty"
 }
+
+fetch('https://reqbin.com/echo/get/json')
+
+   .then(response => response.text())
+
+   .then(text => console.log(text))
